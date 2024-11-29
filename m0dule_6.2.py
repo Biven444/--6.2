@@ -26,7 +26,10 @@ class Vehicle:
 class Sedan (Vehicle):
     __PASSENGER_LIMIT = 5
     def __init__(self, over: str, model: str, color: str, engine_power: int):
-        super().__init__(over, model,color,engine_power)
+        self.over = over
+        self._Vehicle__model = model
+        self._Vehicle__color = color.lower()
+        self._Vehicle__engine_power = engine_power
 
 vehicle1 = Sedan('Fedos', 'Toyota Mark II', 'blue', 500)
 
